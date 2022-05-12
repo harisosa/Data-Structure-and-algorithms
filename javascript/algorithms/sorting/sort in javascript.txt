@@ -1,0 +1,22 @@
+sort in javascript 
+
+sort of array in javascript is compare the unicode of the string
+if its integer, its going to convert integer to string, and check the unicode of the first string
+exp :
+
+68 -> unicode of 6 is 54
+74 -> unicode of 7 is 55
+34 -> unicode of 3 is 51
+
+its gonna be problem if you sort that have integer 68 with 7, 7 is always gonna be greater than 68
+
+
+source : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
+localCompare for unicode : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
+
+to sort properly
+
+arr.sort(function (a,b){
+    return a-b
+})
